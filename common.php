@@ -29,9 +29,18 @@
 
 
 
+
                                 <?php 
                                 $idx++;
                                 endwhile; ?>	
+
+                               <?php if ($idx < 6) {?>
+                                </ul></div></div>
+                               <?php } ?>
+
+
+
+
                             <?php endif; ?>
 
 
