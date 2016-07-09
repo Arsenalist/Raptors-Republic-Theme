@@ -58,7 +58,7 @@
 
 				<div class="container-fluid" style="margin: 0; padding: 0;">
 
-        <div class="container" style="padding: 0">
+        <div class="container" style="padding: 0;">
         <header role="banner">
 
             <div class="navbar navbar-default" id="nav">
@@ -95,11 +95,12 @@
             </div> <!-- end .navbar -->
         </header> <!-- end header -->
         </div>
-<?php if (is_home() && get_option('ad_home_header')) {?>
+<?php if (is_home()) {?>
 
-		<div class="container">
+		<div class="container" style="margin-top: 10px">
+        <?php if (get_option('ad_home_header')) {?>
         <div class="row">
-        <div class="col-lg-12" style="margin-top: 10px">
+        <div class="col-lg-12">
                 <div class="responsive-ad text-center">
                     <?php echo get_option('ad_home_header');?>
     
@@ -107,6 +108,7 @@
  
         </div>
         </div>
+        <?php }?>
         </div>
 <?php }?>
 				<div class="container">
