@@ -1732,6 +1732,16 @@ function print_block($cat_slug, $label, $css='') {
     );
  
       add_settings_field(
+        'ad_in_latest_posts',
+        'Ad - In Latest Posts',
+        'ad_in_latest_posts_callback_function',
+        'reading',
+        'rr_theme_setting_section'
+    );
+ 
+
+
+      add_settings_field(
         'ad_page_level',
         'Ad - Page Level',
         'ad_page_level_callback_function',
@@ -1873,6 +1883,7 @@ add_settings_field(
     register_setting( 'reading', 'banner_large' );
     register_setting( 'reading', 'banner_small' );
     register_setting( 'reading', 'ad_home_header' );
+    register_setting( 'reading', 'ad_in_latest_posts' );
     register_setting( 'reading', 'ad_page_level' );
     register_setting( 'reading', 'ad_after_article_title' );
     register_setting( 'reading', 'ad_in_post' );
@@ -1926,6 +1937,10 @@ register_setting( 'reading', 'front_page_sections' );
  function ad_home_header_callback_function() {
     echo '<textarea name="ad_home_header" id="ad_home_header" rows="10" cols="50">' .  get_option( 'ad_home_header' ) . '</textarea>';
  }                          
+ function ad_in_latest_posts_callback_function() {
+    echo '<textarea name="ad_in_latest_posts" id="ad_home_header" rows="10" cols="50">' .  get_option( 'ad_in_latest_posts' ) . '</textarea>';
+ }                          
+ 
   function ad_page_level_callback_function() {
     echo '<textarea name="ad_page_level" id="ad_page_level" rows="10" cols="50">' .  get_option( 'ad_page_level' ) . '</textarea>';
  }                          
