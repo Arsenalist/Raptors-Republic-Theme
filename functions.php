@@ -1026,22 +1026,7 @@ add_filter( 'the_content', 'patreon_promo' );
 
 
 function pre_content_ad($content) {
-    $ad = '
-    <div class="row">
-  <div class="col-xs-12 text-center"><center>
-    <amp-ad width="300" height="250" type="adsense" data-ad-client="ca-pub-2862903819444632" data-ad-slot="8146026104"></amp-ad>                            </center>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- After Article Title -->
-    <ins class="adsbygoogle"
-    style="display:inline-block;width:300px;height:250px"
-    data-ad-client="ca-pub-2862903819444632"
-    data-ad-slot="8146026104"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-</div>';
-
+    $ad = get_option('ad_after_article_title') ? '<div class="row"><div class="col-xs-12 text-center">' . get_option('ad_after_article_title')  .'</div></div>' : '';
     return $ad . $content;
 
 }
@@ -1754,6 +1739,15 @@ function print_block($cat_slug, $label, $css='') {
         'rr_theme_setting_section'
     );
  add_settings_field(
+    'ad_after_article_title',
+    'Ad - After Article Title',
+    'ad_after_article_title_callback_function',
+    'reading',
+    'rr_theme_setting_section'
+);
+
+
+ add_settings_field(
     'ad_in_post',
     'Ad - In Post',
     'ad_in_post_callback_function',
@@ -1880,6 +1874,7 @@ add_settings_field(
     register_setting( 'reading', 'banner_small' );
     register_setting( 'reading', 'ad_home_header' );
     register_setting( 'reading', 'ad_page_level' );
+    register_setting( 'reading', 'ad_after_article_title' );
     register_setting( 'reading', 'ad_in_post' );
 register_setting( 'reading', 'ad_after_post' );
     register_setting( 'reading', 'google_site_verification_code' );
@@ -1934,7 +1929,11 @@ register_setting( 'reading', 'front_page_sections' );
   function ad_page_level_callback_function() {
     echo '<textarea name="ad_page_level" id="ad_page_level" rows="10" cols="50">' .  get_option( 'ad_page_level' ) . '</textarea>';
  }                          
-   function ad_in_post_callback_function() {
+function ad_after_article_title_callback_function() {
+    echo '<textarea name="ad_after_article_title" id="ad_after_article_title" rows="10" cols="50">' .  get_option( 'ad_after_article_title' ) . '</textarea>';
+}
+
+function ad_in_post_callback_function() {
     echo '<textarea name="ad_in_post" id="ad_in_post" rows="10" cols="50">' .  get_option( 'ad_in_post' ) . '</textarea>';
 }
 function ad_after_post_callback_function() {
