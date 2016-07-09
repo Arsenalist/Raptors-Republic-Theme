@@ -1875,6 +1875,14 @@ add_settings_field(
     'reading',
     'rr_theme_setting_section'
 );
+ add_settings_field(
+    'styles_override',
+    'CSS Styles - Override',
+    'styles_override_callback_function',
+    'reading',
+    'rr_theme_setting_section'
+);
+
 
 
 
@@ -1902,6 +1910,7 @@ register_setting( 'reading', 'social_twitter_username' );
 register_setting( 'reading', 'social_facebook_username' );
 register_setting( 'reading', 'social_patreon_username' );
 register_setting( 'reading', 'front_page_sections' );
+register_setting( 'reading', 'styles_override' );
 
  } // eg_settings_api_init()
  
@@ -2012,6 +2021,11 @@ function social_patreon_username_callback_function() {
 function front_page_sections_callback_function() {
     echo '<textarea name="front_page_sections" id="front_page_sections" rows="10" cols="50">' .  get_option( 'front_page_sections' ) . '</textarea>';
 }
+function styles_override_callback_function() {
+    echo '<textarea name="styles_override" id="styles_override" rows="10" cols="50">' .  get_option( 'styles_override' ) . '</textarea>';
+}
+
+
 
 
 

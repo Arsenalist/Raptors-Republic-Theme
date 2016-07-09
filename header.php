@@ -11,7 +11,7 @@
 
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
-
+<style><?php echo get_option('styles_override');?></style>
 
 
 
@@ -86,7 +86,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="row" style="margin: 0; background: #eee">
+                    <div class="row navbar-row">
                         <div class="col-sm-12 col-xs-12 collapse navbar-collapse navbar-responsive-collapse">
                             <?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
                         </div>
