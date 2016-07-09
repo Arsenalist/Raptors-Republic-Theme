@@ -1,0 +1,676 @@
+/*
+Theme Name: wp-bootstrap
+Theme URI: http://320press.com/wpbs
+Description: A simple responsive theme based on the Bootstrap framework. Includes multiple page templates, two different sidebars and a theme options panel.
+Version: 3.0
+Author: 320press
+Author URI: http://320press.com
+Tags: black, white, one-column, two-columns, flexible-width, custom-background, custom-colors, custom-menu, full-width-template, theme-options
+License: GNU General Public License v2.0 & Apache License 2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/licenses/LICENSE-2.0
+*/
+/* HEADS UP: Everything that you will normally find here can be found in the library/less/wp.less */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+a[rel="author"] {
+  color: #cc0000;
+}
+a {
+  color: #6e99b3;
+}
+.item-headline {
+  font-size: .95em;
+  line-height: 1.2em;
+  color: #222;
+}
+.item-headline a {
+  color: #222;
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.navbar-brand {
+  padding: 0;
+}
+.navbar {
+  background: white;
+  border: 0;
+  border-radius: 0;
+}
+.navbar-default .navbar-brand {
+  color: white;
+}
+body {
+  background-color: #fff;
+}
+body,
+p,
+td {
+  font-family: Lora;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+p {
+  margin-bottom: 1rem;
+  padding: 0;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+/* #b0120a */
+.heading {
+  background: none;
+  border-top: 1px solid #dcdcdc;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  padding: 5px 0;
+  margin-top: 0;
+}
+.heading a {
+  color: black;
+}
+.strip-left {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 2000px;
+}
+img.square {
+  height: 70px;
+  overflow: hidden;
+}
+.container,
+.container-fluid {
+  background-color: white;
+}
+.container {
+  max-width: 1350px;
+  width: 100%;
+}
+.meta {
+  color: #AAAAAA;
+  font-size: .85em;
+}
+ul.flat {
+  padding: 0;
+  margin-left: 15px;
+}
+.full {
+  width: 100%;
+  max-width: 100%;
+}
+#inner-footer {
+  background: #222;
+  color: white;
+  padding: 10px;
+}
+a {
+  color: #767676;
+}
+.pager .previous,
+.pager .next {
+  height: 100px;
+}
+.pager .previous a,
+.pager .next a {
+  background: #9c824a;
+  padding: 10px;
+  border-radius: 0;
+  color: #fff;
+  width: 50%;
+}
+.pager .previous a {
+  border-right: 1px solid #ccc;
+}
+.pager .previous a:hover,
+.pager .next a:hover {
+  background: #dedede;
+  color: #222;
+}
+/* =============================================================================
+   THN Quick Reaction 
+   ========================================================================== */
+.thn-reaction-table {
+  margin: auto;
+}
+.thn-reaction {
+  margin: 10px 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+  color: #333;
+}
+.thn-reaction a {
+  color: #cc0000;
+  text-decoration: none;
+}
+.thn-reaction a:hover {
+  text-decoration: underline;
+}
+.thn-reaction a:visited {
+  color: #cc0000;
+}
+.thn-reaction p {
+  margin: 0 0 1em 0;
+}
+.thn-reaction p:last-child {
+  margin: 0;
+}
+.thn-reaction > div {
+  margin-bottom: 20px;
+  border: 1px #c2c2c2 solid;
+  background: #fff;
+}
+/* =============================================================================
+   THN Header Section
+   ========================================================================== */
+.thn-reaction-player-line {
+  display: block;
+}
+.thn-reaction-header {
+  background: #fff url(http://a2.espncdn.com/prod/assets/gradient_back.jpg) bottom repeat-x !important;
+  padding: 10px;
+}
+.thn-reaction-header td {
+  vertical-align: middle;
+  padding: 0 7px;
+  text-align: center;
+}
+.thn-reaction-header table img {
+  border: none;
+  background-color: transparent;
+}
+.thn-reaction-score {
+  font-weight: bold;
+}
+/* =============================================================================
+   THN Grades Section
+   ========================================================================== */
+.thn-reaction-grades {
+  background: #fff;
+  padding: 5px;
+}
+.thn-reaction-grades td {
+  vertical-align: top;
+  border: none;
+  border-bottom: 1px #d6d6d6 solid;
+  margin: 0;
+  padding: 7px 7px 3px 7px;
+}
+.thn-reaction-grades td.last {
+  border-bottom: none;
+}
+.thn-reaction-player {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.thn-reaction-grades img {
+  max-width: 100%;
+  min-width: 65px;
+}
+.thn-reaction-player-line {
+  padding-left: 10px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.thn-reaction h4 {
+  font-weight: bold;
+  font-size: 15px;
+  border-bottom: 1px #d6d6d6 solid;
+  padding: 0 0 4px 0;
+  text-transform: uppercase;
+}
+/* =============================================================================
+  THN Five Things We Saw
+   ========================================================================== */
+.thn-reaction-summary {
+  padding: 10px;
+}
+.thn-reaction ol {
+  counter-reset: li;
+  /* Initiate a counter */
+  margin-left: 0;
+  /* Remove the default left margin */
+  padding-left: 0;
+  /* Remove the default left padding */
+}
+.thn-reaction ol > li {
+  margin: 0 0 15px 2em;
+  /* Give each list item a left margin to make room for the numbers */
+  padding: 0px 8px;
+  /* Add some spacing around the content */
+  list-style: none;
+  /* Disable the normal item numbering */
+}
+.thn-reaction ol > li:before {
+  content: counter(li);
+  /* Use the counter as content */
+  counter-increment: li;
+  /* Increment the counter by 1 */
+  top: 2px;
+  left: -2em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 2em;
+  margin-right: 8px;
+  padding: 4px;
+  border-top: 1px solid #d6d6d6;
+  color: #fff;
+  background: #666;
+  font-weight: bold;
+  text-align: center;
+}
+.thn-reaction li ol,
+.thn-reaction li ul {
+  margin-top: 6px;
+}
+.thn-reaction ol ol li:last-child {
+  margin-bottom: 0;
+}
+.post_content a {
+  color: #005689;
+  border-bottom: 1px solid #DCDCDB;
+  text-decoration: none;
+}
+.post_content a:hover {
+  border-bottom-color: #6e99b3;
+}
+.single #main .page-header h1 {
+  margin: 20px 0;
+}
+.single #main .page-header {
+  margin-bottom: 0;
+  border-width: 0;
+}
+.single #main p.meta {
+  margin: 0 0 15px 0;
+  color: #222;
+}
+.single #main p.meta time {
+  color: #222;
+}
+.single #main p.meta a {
+  color: #222;
+}
+.single .main-cat {
+  text-align: center;
+  color: white;
+}
+.single .main-cat a {
+  background: #e51c23;
+  padding: 3px 10px;
+  color: white;
+}
+.single #main .post header p.meta img.avatar {
+  width: 40px;
+  margin-right: 10px;
+}
+.single #main li {
+  margin-bottom: 7px;
+}
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+.navbar-nav > li > a {
+  padding: 5px 7px;
+  font-size: 13px;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: #9c824a;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #222;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background: #e51c23;
+  border-color: #e51c23;
+  color: white;
+}
+.myad {
+  margin: 7px 0 7px 7px;
+}
+div.author-meta,
+div.author-meta span a {
+  margin-bottom: 5px;
+  color: #bbb;
+}
+.tag:hover {
+  background: #d7d7d7;
+}
+.aside .panel-heading {
+  background: #e51c23;
+  color: white;
+}
+.aside {
+  float: right;
+  margin: 10px 0 10px 10px;
+  width: 40%;
+}
+.widget_soundcloud_widget {
+  margin-bottom: 20px;
+}
+#sidebar1 .heading .glyphicon {
+  margin-right: 5px;
+}
+.single #main section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+.single #main section iframe {
+  display: block;
+  margin: auto auto;
+}
+.single #main section iframe[src*="follow_button"] {
+  display: inline;
+}
+blockquote {
+  font-size: 1.0em;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: "\201C";
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+.sidebar-article .media-heading {
+  margin: 0;
+}
+.sidebar-article a {
+  font-family: Montserrat;
+}
+.sidebar-article .meta {
+  font-family: Lora;
+  font-size: 11px;
+}
+.sidebar-article hr {
+  margin: 5px 0;
+}
+.content-block {
+  margin: 10px 0;
+}
+.content-block-heading .heading {
+  border: 0;
+  margin: 10px 0;
+  background: #eee;
+  color: #222;
+  padding: 5px;
+}
+#sidebar1 li {
+  font-size: .93em;
+  margin-top: 5px;
+}
+.page-header {
+  margin-top: 0px;
+}
+.iosSlider a,
+.iosSlider a:hover,
+.iosSlider:visited {
+  color: white;
+}
+/* http://stackoverflow.com/questions/796087/make-a-div-into-a-link */
+.clickable {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.iosSlider {
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 800px;
+  height: 350px;
+}
+.iosSlider .slider {
+  width: 100%;
+  height: 100%;
+}
+.iosSlider .slider .item {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 720px;
+  height: 350px;
+}
+.iosSlider .slider .item .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+}
+.iosSlider .slider .item .image .bg {
+  border: 10px solid #000;
+  border-right: 0;
+  height: 180px;
+  width: 340px;
+  opacity: 0.5;
+  display: none;
+}
+.iosSlider .slider .item .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+}
+.iphoneUI .iosSlider .slider .item .text {
+  display: none;
+}
+.iosSlider .slider .item .text .bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: black;
+  opacity: 0.75;
+}
+.iphoneUI .iosSlider .slider .item .text .bg {
+  display: none;
+}
+.iosSlider .slider .item .title {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 5px;
+  text-indent: -1px;
+}
+.iosSlider .slider .item .title span {
+  color: #fff;
+  font: bold 26px/24px Montserrat;
+}
+.iosSlider .slider .item .desc {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0 0 0px 0;
+  color: white;
+  font-size: .9em;
+}
+.iosSlider .slider .item .desc span,
+.iosSlider .slider .item .desc span p {
+  font: 14px/16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #d8d8d8;
+  margin: 0;
+}
+.iosSlider .slider .item .button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 0 10px 0 10px;
+  margin: 10px 0 0 0;
+  background: #aaa;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.iosSlider .slider .item .button span {
+  color: #000;
+  font: normal 14px/30px;
+}
+.iosSliderButtons {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  margin: 3px;
+}
+.iosSliderButtons .button {
+  display: inline-block;
+  margin: 0 5px;
+  width: 80px;
+  height: 80px;
+  opacity: 0.60;
+  /*filter: alpha(opacity, 60); */
+}
+.iosSliderButtons .button .border {
+  border: 1px solid #000;
+  opacity: 0.5;
+  width: 80px;
+  height: 80px;
+}
+.iosSliderButtons .first {
+  margin-left: 0;
+}
+.iosSliderButtons .selected,
+.iosSliderButtons .button:hover {
+  opacity: 1;
+  /*filter: alpha(opacity, 100);*/
+}
+.categories a,
+.tag a {
+  background: #9c824a;
+  color: white;
+  padding: 3px 5px;
+  font-size: .8em;
+  text-transform: uppercase;
+}
+.widget_dennykpick_widget,
+.widget_biyombo_widget {
+  margin-bottom: 20px;
+}
+.panel-ovo > .panel-heading {
+  border-color: #a39362;
+  background: #a39362;
+}
+.in-post-social {
+  padding: 5px;
+  background: #eee;
+}
+@media (min-width: 768px) {
+  .in-post-ad {
+    float: right !important;
+    padding: 5px;
+  }
+  td .in-post-ad {
+    float: none !important;
+    text-align: center;
+  }
+  .single #main .page-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .navbar-brand {
+    height: 74px;
+  }
+}
+@media (max-width: 767px) {
+  .aside {
+    float: none;
+    width: 100%;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+  .single #main .page-header h1 {
+    font-size: 26px;
+  }
+  .sidebar-article a {
+    font-size: 1.1em;
+    line-height: 1.2em;
+  }
+  .navbar-brand {
+    height: 50px;
+  }
+  .featuredBox {
+    display: none;
+  }
+  .in-post-ad {
+    text-align: center;
+    display: block;
+    padding: 5px;
+  }
+  td .in-post-ad {
+    float: none !important;
+    text-align: center;
+  }
+}
+#menu-item-71087 a,
+#menu-item-71144 a {
+  color: #cc0000;
+}
+#menu-item-71087 a:hover,
+#menu-item-71144 a:hover {
+  background: #cc0000;
+  color: white;
+}
+@keyframes glowing {
+  0% {
+    background-color: #cc0000;
+  }
+  50% {
+    background-color: #222;
+  }
+  100% {
+    background-color: #cc0000;
+  }
+}
+.live {
+  animation: glowing 3000ms infinite;
+}
