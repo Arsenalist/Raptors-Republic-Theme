@@ -1676,6 +1676,7 @@ function print_block($cat_slug, $label, $css='') {
                                             </div>
                                             </div>
 
+                                    </article>
                                     </div>
                             <?php }?>
                             <?php if ($index == 2) {?>
@@ -1685,11 +1686,14 @@ function print_block($cat_slug, $label, $css='') {
                                 <?php render_sidebar_article(false);?>
                             <?php } ?>
                             
-                            <?php if ($index == 5) {?>
+
+                                <?php endwhile; ?>	
+
+                   <?php if ($index > 2) {?>
                                 </div>
                             <?php } ?>
 
-                                <?php endwhile; ?>	
+
                             <?php endif; ?>
         </div>
         </div>
