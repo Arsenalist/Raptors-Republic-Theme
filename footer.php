@@ -18,20 +18,6 @@
 						<?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
 					<p class="attribution">&copy; <?php bloginfo('name'); ?></p>
-                    <p>
-<ul class="list-inline">
-<li><a href="/privacy-policy">Privacy Policy</a></li>
-<li><a href="http://feeds.feedburner.com/raptorsrepublic">RSS</a></li>
-<li><a href="http://twitter.com/raptorsrepublic">Twitter</a></li>
-<li><a href="http://facebook.com/raptorsrepublic">Facebook</a></li>
-<li><a href="http://youtube.com/raptorsrepublic">YouTube</a></li>
-<li><a href="http://raptorsrepublic.tumblr.com">Tumblr</a></li>
-<li><a href="https://plus.google.com/102248038781825428822" rel="publisher">Google+</a></li>
-<li><a href="https://itunes.apple.com/ca/podcast/raptors-republic-rapcast/id581008111">iTunes</a></li>
-</ul>
-
-
-                    </p>
 				
 				</div> <!-- end #inner-footer -->
 				
