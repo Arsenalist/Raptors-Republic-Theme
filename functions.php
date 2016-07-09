@@ -1620,7 +1620,7 @@ function print_block($cat_slug, $label, $css='') {
  
  
                             $index = 0;
- 
+                            global $post;
                             if ($pb_query->have_posts()) : while ($pb_query->have_posts()) : $pb_query->the_post(); 
                                     $post_link = get_permalink();
                                     $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium');
