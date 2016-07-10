@@ -669,10 +669,6 @@ class Forum_Widget extends WP_Widget {
         if (have_posts()) : while (have_posts()) : the_post(); 
         $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumb');
         $post_link = get_forum_link();
-        $rss_items = $this->get_topics();
-        if (!is_array($rss_items)) {
-            $rss_items = array();    
-        }
         ?>
         
             <div class="media">
@@ -686,11 +682,6 @@ class Forum_Widget extends WP_Widget {
                     </div>
                 </div>
             </div>
-                  <ul class="flat" style="margin-top: 10px">
-                        <?php foreach ( $rss_items as $item ) : ?>
-                            <li><a href="<?php echo esc_url( $item->get_permalink() ); ?>"><?php echo esc_html( $item->get_title() ); ?></a></li>
-                        <?php endforeach; ?>
-                  </ul>
                                 <?php endwhile; ?>	
                             <?php endif; ?>
 
@@ -1133,6 +1124,7 @@ function insert_after_tag($content, $fragment, $tag, $occurrence) {
         if (count($content) <= 3) {
             $occurrence = 0;    
         }
+        $new_content = '';
         for ( $i = 0; $i < count ( $content ); $i ++ ) {
             if ( $i == $occurrence ) {
                 $new_content .= $fragment;
