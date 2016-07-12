@@ -1620,41 +1620,31 @@ function print_block($cat_slug, $label, $css='') {
                             ?>
                             <?php if ($index == 1) {?>
                             <div class="col-xs-12 col-sm-6">
+                                 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+                                        <div style="width: 100%; height: 160px; overflow:hidden">
+                                         <a onclick="ga('send', 'event', 'Content Block - Main - ' . $label, this.innerHTML, this.getAttribute('href')); return true;"  class="pull-left" style="position: relative" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'medium', array( 'style' => 'width: 100%; max-width: 100%; margin-bottom: 10px', 'class' => 'media-object img-square')); ?>
+                                         </a>
+                                         </div>
 
+                                        <h4><a onclick="ga('send', 'event', 'Content Block - Secondary - ' . $label, this.innerHTML, this.getAttribute('href')); return true;"  class="entry-title" href="<?php the_permalink()?>" style="color: black; font-weight: bold; line-height: 1.5em"  rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
 
-
-                                     <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-                                            <div style="width: 100%; height: 160px; overflow:hidden">
-                                             <a onclick="ga('send', 'event', 'Content Block - Main - ' . $label, this.innerHTML, this.getAttribute('href')); return true;"  class="pull-left" style="position: relative" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'medium', array( 'style' => 'width: 100%; max-width: 100%; margin-bottom: 10px', 'class' => 'media-object img-square')); ?>
-                                             </a>
-                                             </div>
-
-                                            <h4><a onclick="ga('send', 'event', 'Content Block - Secondary - ' . $label, this.innerHTML, this.getAttribute('href')); return true;"  class="entry-title" href="<?php the_permalink()?>" style="color: black; font-weight: bold; line-height: 1.5em"  rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-
-                                               <div class="excerpt"><?php the_excerpt()?></div>
+                                         <div class="excerpt"><?php the_excerpt()?></div>
 
                                          <div class="row" style="display:none">
                                          <div class="col-xs-6">
-                                        <span class="vcard author" style="text-align: center; font-size: .9em">
-                                        <span class="fn"><?php the_author_posts_link(); ?></span>
-                                        </span>
-                                        </div>
-                                        <div class="col-xs-6">
- 
-
-
-                                                <time class="meta updated dtstart" datetime="<?php echo the_time('c') ?>" pubdate="<?php echo the_time('Y-m-d')?>"><?php echo smart_date(); ?></time>
-                                               <?php if (get_comments_number() > 0) {?>
-                                               <span class="meta"> | </span>
-                                            <a class="meta" href="<?php the_permalink()?>">
-                                               <?php comments_number('', '1', '%' );?>
-                                            </a>
+                                            <span class="vcard author" style="text-align: center; font-size: .9em">
+                                                <span class="fn"><?php the_author_posts_link(); ?></span>
+                                            </span>
+                                         </div>
+                                         <div class="col-xs-6">
+                                            <time class="meta updated dtstart" datetime="<?php echo the_time('c') ?>" pubdate="<?php echo the_time('Y-m-d')?>"><?php echo smart_date(); ?></time>
+                                           <?php if (get_comments_number() > 0) {?>
+                                              <span class="meta"> | </span>
+                                              <a class="meta" href="<?php the_permalink()?>"><?php comments_number('', '1', '%' );?></a>
                                             <?php } ?>
-                                            </div>
-                                            </div>
-
-                                    </article>
-                                    </div>
+                                         </div>
+                                </article>
+                                </div>
                             <?php }?>
                             <?php if ($index == 2) {?>
                                 <div class="col-xs-12 col-sm-6">
@@ -1662,15 +1652,11 @@ function print_block($cat_slug, $label, $css='') {
                             <?php if ($index > 1 && $index <= 5) {?>
                                 <?php render_sidebar_article(false);?>
                             <?php } ?>
-                            
-
                                 <?php endwhile; ?>	
 
-                   <?php if ($index > 2) {?>
+                           <?php if ($index > 1) {?>
                                 </div>
                             <?php } ?>
-
-
                             <?php endif; ?>
         </div>
         </div>
