@@ -19,26 +19,14 @@
                                 
                                 <div class="col-sm-6" style="margin-top: 15px">
 <ul id="latestlist">
-                               <?php } else if ($idx < 6) {?>
+                               <?php } else {?>
                                     <li ><a style="font-size: 13px" onclick="ga('send', 'event', 'Home Page Latest Title Click', this.innerHTML, this.getAttribute('href')); return true;" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title_attribute(); ?></a></li>
-                               <?php } else {  ?>
-                               </ul>
-                               </div>
-            </div>
-                               <?php break; } ?>
-
-
-
-
+                               <?php }  ?>
                                 <?php 
                                 $idx++;
                                 endwhile; ?>	
 
-                               <?php if ($idx < 6) {?>
                                 </ul></div></div>
-                               <?php } ?>
-
-
 
 
                             <?php endif; ?>

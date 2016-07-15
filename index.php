@@ -8,7 +8,6 @@
                             <?php get_template_part( 'latest' ); ?> 
                       </div>		
                         <div id="featured" class="col-sm-8">
-
                     <?php require_once('common.php'); ?>
                                 <?php
                                     $front_page_sections_data = json_decode(get_option("front_page_sections"));
@@ -22,7 +21,6 @@
  
                        </div>		
                        </div>		
-
                 </div>
 				<?php  get_sidebar('sidebar2'); // sidebar 1 ?>
 			</div> <!-- end #content -->
